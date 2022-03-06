@@ -537,14 +537,19 @@ void StartTask02(void const * argument)
 {
   /* USER CODE BEGIN StartTask02 */
    HAL_ADC_Init(&hadc1);
-   int16_t temp = 0;
+    uint8_t temp_r = 0;
+    float temp = 0;
+    uint8_t i_temp = 0;
     for(;;)
     {
         //xSemaphoreTake( BigMacHandle, portMAX_DELAY);
         HAL_ADC_Start(&hadc1);
-        HAL_ADC_PollForConversion(&hadc1, 50);
+        HAL_ADC_PollForConversion(&hadc1, 5);
 
-        temp = HAL_ADC_GetValue(&hadc1);
+        temp_r = HAL_ADC_GetValue(&hadc1);
+        temp = temp_r * 2.34 / 3.44;
+        i_temp = temp;
+
 
         HAL_GPIO_WritePin(GPIOD, LD4_Pin,GPIO_PIN_RESET);
         osDelay(200);
@@ -554,8 +559,8 @@ void StartTask02(void const * argument)
         uint8_t pBuffer[3];
 
 
-        pBuffer[0] = temp / 100 + 48;
-        pBuffer[1] = temp % 10 + 48;
+        pBuffer[0] = i_temp / 10 + 48;
+        pBuffer[1] = i_temp % 10 + 48;
         pBuffer[2] = '\n';
         //pBuffer[1] = '\n';
         uint16_t size =3;
