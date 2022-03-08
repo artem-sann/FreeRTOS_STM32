@@ -60,12 +60,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
   </component>
   <component name="RunManager" selected="OpenOCD Download &amp; Run.OCD FreeRTOS">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="FreeRTOS.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FreeRTOS" TARGET_NAME="FreeRTOS.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FreeRTOS" RUN_TARGET_NAME="FreeRTOS.elf">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FreeRTOS.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FreeRTOS" TARGET_NAME="FreeRTOS.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FreeRTOS" RUN_TARGET_NAME="FreeRTOS.elf">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -94,7 +94,8 @@
       <workItem from="1645897403160" duration="16021000" />
       <workItem from="1646050370049" duration="7811000" />
       <workItem from="1646135490998" duration="1628000" />
-      <workItem from="1646581766587" duration="6185000" />
+      <workItem from="1646581766587" duration="8460000" />
+      <workItem from="1646769358541" duration="408000" />
     </task>
     <task id="LOCAL-00001" summary="Added Temperature Sensor">
       <created>1646589002576</created>
@@ -103,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646589002576</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Temperature Sensor">
+      <created>1646591545146</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646591545146</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

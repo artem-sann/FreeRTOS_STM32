@@ -8,6 +8,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <string.h>
+#include <usbd_cdc_if.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -514,6 +515,7 @@ void StartDefaultTask(void const * argument)
   /* USER CODE BEGIN 5 */
   BigMacHandle = xSemaphoreCreateCounting( 100, 0 );
   char pData[8] = "";
+  char* ToSerial = "Hello from STM32\n";
   pData[0] = '0';
     for(;;)
     {
@@ -525,8 +527,8 @@ void StartDefaultTask(void const * argument)
                xQueueSendToBack(FromBluetoothHandle, pData, 10);
                pData[0] = '0';
            }
-
-        osDelay(50);
+        CDC_Transmit_FS(ToSerial, 17);
+        osDelay(500);
     }
   /* USER CODE END 5 */
 }
